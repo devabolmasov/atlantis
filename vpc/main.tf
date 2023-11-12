@@ -30,7 +30,7 @@ resource "google_compute_firewall" "atlantis_test_firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["8081"]
+    ports    = ["80"]
   }
   
   source_ranges = ["0.0.0.0/0"] # Allow HTTP access from any IP address (for demonstration purposes, you may want to restrict this to a specific IP range)
