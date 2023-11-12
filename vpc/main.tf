@@ -30,7 +30,7 @@ resource "google_compute_firewall" "allow-http-https" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80"]
+    ports    = ["8080"]
   }
   
   source_ranges = ["0.0.0.0/0"] # Allow HTTP access from any IP address (for demonstration purposes, you may want to restrict this to a specific IP range)
