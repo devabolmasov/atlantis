@@ -24,13 +24,13 @@ resource "google_compute_subnetwork" "terraform_subnetwork" {
 
 }
 
-resource "google_compute_firewall" "allow-http-https" {
-  name    = "allow-http-s"
+resource "google_compute_firewall" "atlantis_test_firewall" {
+  name    = "atlantis-test"
   network = google_compute_network.vpc_network.self_link
 
   allow {
     protocol = "tcp"
-    ports    = ["80"]
+    ports    = ["8081"]
   }
   
   source_ranges = ["0.0.0.0/0"] # Allow HTTP access from any IP address (for demonstration purposes, you may want to restrict this to a specific IP range)
