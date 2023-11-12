@@ -1,2 +1,2 @@
-# atlantis
-repo for atlantis testing
+# Atlantis
+This is the repo for atlantis testing
