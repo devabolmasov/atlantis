@@ -23,3 +23,15 @@ resource "google_compute_subnetwork" "terraform_subnetwork" {
   network       = google_compute_network.vpc_network.id
 
 }
+
+resource "google_compute_firewall" "allow-http-https" {
+  name    = "allow-http-s"
+  network = google_compute_network.vpc_network.self_link
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
+  }
+  
+  source_ranges = ["0.0.0.0/0"] # Allow HTTP access from any IP address (for demonstration purposes, you may want to restrict this to a specific IP range)
+}
