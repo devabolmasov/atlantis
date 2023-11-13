@@ -26,7 +26,7 @@ resource "google_compute_subnetwork" "atlantis_demo_subnetwork" {
 
 
 resource "google_compute_firewall" "atlantis_test_firewall" {
-  name    = "atlantis-test"
+  name    = "atlantis-demo-firewall"
   network = google_compute_network.atlantis_demo_network.self_link
 
   allow {
